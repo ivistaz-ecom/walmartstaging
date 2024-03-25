@@ -15,6 +15,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }} # Your server's IP address
           username: ${{ secrets.SSH_USERNAME }} # Your server's username
           key: ${{ secrets.SSH_KEY }} # Your server's SSH private key
+          password: ${{ secrets.SSH_PASS }} # Your server's SSH password
 
           script: |
             cd /home/react/wv-react
