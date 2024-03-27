@@ -9,7 +9,7 @@ job:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy NextJs App
-      uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@master
 
       with:
         host: ${{ secrets.SSH_HOST }} # Your server's IP address
