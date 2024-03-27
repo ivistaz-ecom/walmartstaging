@@ -2,7 +2,9 @@ name: Deploy to production
 
 on:
     workflow-dispatch:
-        environment: Staging
+        branches:
+            - [main]
+            environment: Staging
 
 jobs:
     deploy:
