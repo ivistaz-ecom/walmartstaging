@@ -2,8 +2,8 @@ name: Deploy to production
 
 on:
     workflow-dispatch:
-        branches: main
-        environment: Staging
+        environment: 
+            name: Staging
 
 jobs:
     deploy:
