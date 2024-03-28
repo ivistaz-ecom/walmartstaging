@@ -1,13 +1,12 @@
 name: Deploy to production
 
 on:
-    workflow-dispatch:
-        environment: 
-            name: Staging
+    workflow_dispatch:
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
+        environment: Staging
         steps:
             - name: Deploy NextJs App
               uses: appleboy/ssh-action@master
