@@ -6,7 +6,7 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
-        environment: Staging
+        environment: Production
         steps:
             - name: Deploy NextJs App
               uses: appleboy/ssh-action@master
@@ -19,4 +19,7 @@ jobs:
       
                 script: |
                   cd /home/react/wv-react
-                  echo $USER . " logged in successfully"
+                  git pull origin main
+                  npm install
+                  npm run build
+                  pm2 restart walmart22
